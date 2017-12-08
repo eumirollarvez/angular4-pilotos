@@ -5,9 +5,9 @@ import { Http } from "@angular/http";
 export class InformacionService {
 
   info:any = {};
-  cargada:boolean = false;
+  cargando:boolean = true;
   equipo:any[] = [];
-  cargada_conocenos:boolean = false;
+  cargando_conocenos:boolean = true;
 
   constructor(public http:Http) {
     this.carga_info();
@@ -18,7 +18,7 @@ export class InformacionService {
     this.http.get("assets/data/info.pagina.json")
               .subscribe(data => {
                 //console.log(data.json());
-                this.cargada = true;
+                this.cargando = false;
                 this.info = data.json();
               });
   }
@@ -26,8 +26,8 @@ export class InformacionService {
   public carga_conocenos(){
     this.http.get("https://pilotos-a97b4.firebaseio.com/equipo.json")
               .subscribe(data => {
-                console.log(data.json());
-                this.cargada_conocenos = true;
+                //console.log(data.json());
+                this.cargando_conocenos = false;
                 this.equipo = data.json();
               });
   }
