@@ -14,7 +14,7 @@ export class ProductComponent {
   cod:string=undefined;
 
   constructor(private route:ActivatedRoute,
-              private _ps:ProductosService){
+              public _ps:ProductosService){
 
       route.params.subscribe(parametros=>{
 
