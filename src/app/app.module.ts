@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductComponent } from './components/product/product.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ProductComponent } from './components/product/product.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ProductComponent
+    ProductComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
